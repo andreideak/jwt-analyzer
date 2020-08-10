@@ -7,7 +7,21 @@ function signIn() {
     .then(loginResponse => {
         console.log("id_token acquired at: " + new Date().toString());
         console.log(loginResponse);  
-        
+        tokenEncoded = loginResponse.idToken.rawIdToken;
+        document.getElementById('textarea-decoder').value = tokenEncoded;
+        tokenEncodedStyled = tokenEncoded.split('.');
+        tokenEncodedStyled[0]
+        tokenDecoded = parseJwt(tokenEncoded);
+        tokenDecodedHeader = tokenDecoded.header;
+        tokenDecodedPayload = tokenDecoded;
+        delete tokenDecodedPayload.header;
+        const header = document.getElementById('json-header');
+        const payload = document.getElementById('json-payload');
+        header.innerHTML = syntaxHighlight(JSON.stringify(tokenDecodedHeader, undefined, 2));
+        payload.innerHTML = syntaxHighlight(JSON.stringify(tokenDecodedPayload, undefined, 2));
+        tokenDecoded;
+        function pageRedirect() { window.location.replace("http://localhost:6420/index.html#token-decoder-container")};
+        pageRedirect();
         if (myMSALObj.getAccount()) {
           updateUI();
         }

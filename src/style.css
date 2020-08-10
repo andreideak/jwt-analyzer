@@ -1,0 +1,242 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato";
+}
+
+
+.navbar {
+    background-color: #000;
+    color: #fff;
+    height: 75px;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    width: 250px;
+    height: 75px;
+}
+
+.navbar-logo {
+    color:  #A3DF02;
+    font-size: 48px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-brand-redirect {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+
+.navbar-logo svg,
+.navbar-brand-redirect {
+    justify-self: center;
+    align-self: center;
+}
+
+.navbar-menu-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.navbar-menu-container a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.navbar-menu-icon {
+    font-size: 20px;
+}
+
+.navbar-menu-item-icon {
+    padding-right: 5px;
+}
+
+.navbar-menu-github,
+.navbar-menu-oauth2-rfc,
+.navbar-menu-feedback {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+}
+
+
+.navbar-menu-github a:hover,
+.navbar-menu-oauth2-rfc a:hover,
+.navbar-menu-feedback a:hover {
+    transition: ease-in 0.1s;
+    color: #A3DF02;
+    border-bottom: 1px solid #A3DF02;
+    padding-bottom: 5px;
+}
+
+.siso-btn {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-image: linear-gradient(to right bottom, #A3DF02, #7ba30c);
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+    color: #fff;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.siso-btn-flow {
+    height: 50px;
+    width: 250px;
+}
+
+/*.siso-btn {
+    color: #fff;
+    background-color: #000;
+    font-size: 20px;
+    border: none;
+    height: 30px;
+    justify-self: center;
+    align-self: center;
+}*/
+
+.d-none {
+    display: none;
+}
+
+.navbar-menu-signin-signout {
+    display: flex;
+    margin-right: 50px;
+}
+
+/* BODY */
+
+.flow-selector-container,
+#token-decoder-container {
+    height: 95vh;
+}
+
+
+.main-container {
+    margin: 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flow-selector-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.flow-icon img {
+    height: 300px;
+}
+
+.flow-button-token-analyzer {
+    color: #A3DF02;
+}
+
+.flow-b2c-login,
+.flow-decode-token {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 50vh;
+}
+
+.flow-b2c-login div,
+.flow-decode-token div {
+    align-self: center;
+}
+
+.flow-title {
+    font-size: 20px;
+}
+
+.token-decoder-container {
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.token-decoder-container textarea {
+    resize: none;
+    width: 140vh;
+    height: 150px;
+    background-color: #f9f9f9;
+    font-family: "Lato";
+    font-size: 16px;
+    border: 1px solid #e8e6e6;
+}
+
+textarea {
+    outline-color: #A3DF02;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; font-size: 20px;}
+.string { color: #be866e; }
+.number { color: #A3DF02; }
+.boolean { color: #873232; }
+.null { color: #873232; }
+.key { color: #569cd6; }
+
+#json-header,
+#json-payload {
+    outline: none;
+}
+
+.jwt-decoded-container {
+    margin-top: 50px;
+}
+
+.jwt-decoded-header-title,
+.jwt-decoded-payload-title {
+    font-size: 22px;
+    font-weight: 700;
+
+}
+
+.token-decoder-output {
+    display: flex;
+    justify-self: stretch;
+}

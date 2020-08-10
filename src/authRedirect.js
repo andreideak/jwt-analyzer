@@ -29,6 +29,7 @@ function authRedirectCallBack(error, response) {
     if (response.tokenType === "id_token" && response.idToken.claims['acr'] !== b2cPolicies.names.signUpSignIn) {
       myMSALObj.logout();
       window.alert("Password has been reset successfully. \nPlease sign-in with your new password.");
+      console.log(accessToken)
     } else if (response.tokenType === "id_token" && response.idToken.claims['acr'] === b2cPolicies.names.signUpSignIn) {
       console.log("id_token acquired at: " + new Date().toString());
 

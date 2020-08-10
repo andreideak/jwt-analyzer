@@ -4,15 +4,15 @@
 
 const b2cPolicies = {
     names: {
-        signUpSignIn: "b2c_1_susi",
-        forgotPassword: "b2c_1_reset"
+        signUpSignIn: "B2C_1_SUSI_NextGen",
+        forgotPassword: "B2C_1_PWD_RESET"
     },
     authorities: {
         signUpSignIn: {
-            authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_susi",
+            authority: "https://nodejsdevb2c.b2clogin.com/nodejsdevb2c.onmicrosoft.com/B2C_1_SUSI_NextGen",
         },
         forgotPassword: {
-            authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_reset",
+            authority: "https://nodejsdevb2c.b2clogin.com/nodejsdevb2c.onmicrosoft.com/B2C_1_PWD_RESET",
         },
     },
 }

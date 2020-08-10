@@ -6,7 +6,7 @@
  * */
 const msalConfig = {
   auth: {
-    clientId: "d7a1ce1d-abde-4a48-86f7-6241e98e6bf1",
+    clientId: "9383031a-5ecb-42a6-ba11-f9f0abe342c7",
     authority: b2cPolicies.authorities.signUpSignIn.authority,
     validateAuthority: false
   },
@@ -26,5 +26,5 @@ const loginRequest = {
 
 // Add here scopes for access token to be used at the API endpoints.
 const tokenRequest = {
-  scopes: apiConfig.b2cScopes,  // e.g. ["https://fabrikamb2c.onmicrosoft.com/helloapi/demo.read"]
+  scopes: "https%3A%2F%2Fgraph.microsoft.com%2Fuser.read"
 };
