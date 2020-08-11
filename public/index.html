@@ -77,8 +77,7 @@
           Decode existing Azure AD / Azure AD B2C token
         </div>
         <div class="flow-button flow-button-token-analyzer">
-          <button type="button" class="siso-btn siso-btn-flow" onclick="location.href='index.html#token-decoder-container';" class="btn" id="btn-token-analyzer">Token Analyzer</button>
-          <a href="index.html#token-decoder-container"></a>
+          <button type="button" class="siso-btn siso-btn-flow" onclick="window.location.href='#token-decoder-container';" class="btn" id="btn-token-analyzer">Token Analyzer</button>
         </div>
       </div>
       </div>
@@ -91,13 +90,13 @@
         <div class="jwt-decoded-container">
           <div class="jwt-decoded-row-container">
               <div class="jwt-decoded-header">
-                  <div class="jwt-decoded-header-title">Header</div>
+                  <div id="header-title" class="jwt-decoded-header-title">Header</div>
                   <div class="jwt-decoded-header-data">
                       <pre id='json-header'></pre>
                   </div>
               </div>
               <div class="jwt-decoded-payload">
-                  <div class="jwt-decoded-payload-title">Payload</div>
+                  <div id="payload-title" class="jwt-decoded-payload-title">Payload</div>
                   <div class="jwt-decoded-payload-data">
                       <pre id='json-payload'></pre>
                   </div>
@@ -122,5 +121,14 @@
 
   <!-- Importing Ionicons package -->
   <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.17.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
 </body>
 </html>

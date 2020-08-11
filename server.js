@@ -15,11 +15,11 @@ const port = 6420;
 app.use(morgan('dev'));
 
 // Set the front-end folder to serve public assets.
-app.use(express.static('src'))
+app.use(express.static('public'))
 
 // Set up a route for index.html.
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile('https://aadjwt.web.app');
 });
 
 // Start the server.

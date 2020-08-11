@@ -20,7 +20,7 @@ function signIn() {
         header.innerHTML = syntaxHighlight(JSON.stringify(tokenDecodedHeader, undefined, 2));
         payload.innerHTML = syntaxHighlight(JSON.stringify(tokenDecodedPayload, undefined, 2));
         tokenDecoded;
-        function pageRedirect() { window.location.replace("http://localhost:6420/index.html#token-decoder-container")};
+        function pageRedirect() { window.location.href('#token-decoder-container')};
         pageRedirect();
         if (myMSALObj.getAccount()) {
           updateUI();

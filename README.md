@@ -26,7 +26,6 @@ This simple sample demonstrates how to use the [Microsoft Authentication Library
 | `package.json`    | Package manifest for npm.                  |
 | `README.md`       | This README file.                          |
 | `server.js`       | Implements a simple Node server to serve index.html.  |
-|-------------------|--------------------------------------------|
 
 ## Dependencies
 - Node.js 12.18.2
